@@ -12,9 +12,9 @@ def main():
     
     while True:
         game_map.display(player.position)
-        move = input("Move (N/S/E/W) or shoot (SN/SS/SE/SW): ").strip().upper()
+        move = input("Move (N/S/E/W) or shoot (XN/XS/XE/XW): ").strip().upper()
 
-        if move.startswith("S"):
+        if move.startswith("X"):
             if wumpus.shoot(move[1:], player.position, game_map):
                 print("You shot the Wumpus! You win!")
                 break
